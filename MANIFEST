@@ -2,4 +2,14 @@
 setup.cfg
 setup.py
 pycraft_minetest/__init__.py
+pycraft_minetest/blocklist.py
+pycraft_minetest/connection.py
+pycraft_minetest/entity.py
+pycraft_minetest/event.py
 pycraft_minetest/main.py
+pycraft_minetest/minecraft.py
+pycraft_minetest/nbt.py
+pycraft_minetest/security.py
+pycraft_minetest/settings.py
+pycraft_minetest/util.py
+pycraft_minetest/vec3.py
