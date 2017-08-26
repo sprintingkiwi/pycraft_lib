@@ -1,11 +1,11 @@
 import time, random, math, os
-import mcpi.connection
-import mcpi.block as bl
-from mcpi.util import *
-from mcpi.event import *
-conn = mcpi.connection.Connection("localhost", 4711)
+import connection
+import blocklist as bl
+from util import *
+from event import *
+conn = connection.Connection("localhost", 4711)
 
-LIBRARY_VERSION = 0.2
+LIBRARY_VERSION = 0.3
 
 # Find the player
 # players = mc.getPlayerEntityIds()
