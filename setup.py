@@ -1,7 +1,7 @@
 from distutils.core import setup
 setup(
-    name='pycraft',
-    packages=['pycraft'],
+    name='pycraft_minetest',
+    packages=['pycraft_minetest'],
     version='0.1',
     description='Modified, simplified and improved libraries to code in Python via Minetest.',
     author='alenorfo & gmenegoz',
