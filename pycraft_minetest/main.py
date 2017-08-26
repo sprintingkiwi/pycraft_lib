@@ -5,6 +5,8 @@ from mcpi.util import *
 from mcpi.event import *
 conn = mcpi.connection.Connection("localhost", 4711)
 
+LIBRARY_VERSION = 0.2
+
 # Find the player
 # players = mc.getPlayerEntityIds()
 ids = conn.sendReceive("world.getPlayerIds")
