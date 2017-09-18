@@ -5,7 +5,7 @@ from util import *
 from event import *
 conn = connection.Connection("localhost", 4711)
 
-LIBRARY_VERSION = 0.4
+LIBRARY_VERSION = 0.5
 
 # Find the player
 # players = mc.getPlayerEntityIds()
@@ -18,6 +18,7 @@ while wait_for_player:
         ids = conn.sendReceive("world.getPlayerIds")
     except:
         print("Waiting for a player to connect...")
+        time.sleep(1)
     else:
         wait_for_player = False
 
