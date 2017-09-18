@@ -3,9 +3,19 @@ import connection
 import blocklist as bl
 from util import *
 from event import *
-conn = connection.Connection("localhost", 4711)
 
-LIBRARY_VERSION = 0.5
+LIBRARY_VERSION = 0.6
+
+# Wait for connection
+wait_for_conn = True
+while wait_for_conn:
+    try:
+        conn = connection.Connection("localhost", 4711)
+    except:
+        print("Waiting for connection...")
+        time.sleep(1)
+    else:
+        wait_for_conn = False
 
 # Find the player
 # players = mc.getPlayerEntityIds()
