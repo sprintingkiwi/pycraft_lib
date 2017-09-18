@@ -133,6 +133,10 @@ nether_reactor_core = bl.NETHER_REACTOR_CORE.id
 #barrier = bl.BARRIER.id
 
 
+def getblock(name):
+    return globals()[name]
+
+
 def chat(text):
     conn.send("chat.post", text)
 
