@@ -9,7 +9,18 @@ LIBRARY_VERSION = 0.3
 
 # Find the player
 # players = mc.getPlayerEntityIds()
-ids = conn.sendReceive("world.getPlayerIds")
+
+# Wait for at least one player
+
+wait_for_player = True
+while wait_for_player:
+    try:
+        ids = conn.sendReceive("world.getPlayerIds")
+    except:
+        print("Waiting for a player to connect...")
+    else:
+        wait_for_player = False
+
 players = map(int, ids.split("|"))
 player = players[0]
 
