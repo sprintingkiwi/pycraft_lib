@@ -5,7 +5,7 @@ from util import *
 from event import *
 conn = connection.Connection("localhost", 4711)
 
-LIBRARY_VERSION = 0.3
+LIBRARY_VERSION = 0.4
 
 # Find the player
 # players = mc.getPlayerEntityIds()
