@@ -20,7 +20,7 @@ Work in progress...
 
 ### Scratch extension
 If you're planning to use the Pycraft library also in Scratch:
-* Download the following file: [pycraft.s2e](https://raw.githubusercontent.com/sprintingkiwi/pycraft_mod/master/pycraft.s2e)
+* <a href="https://raw.githubusercontent.com/sprintingkiwi/pycraft_mod/master/pycraft.s2e" download>Click here to download the pycraft.s2e extension file</a>
 * Open Scratch Offline Editor (here's how to install it: https://scratch.mit.edu/download)
 * Pressing SHIFT + Left Click on "File" menu, select "Add an extension" and load the downloaded "pycraft.s2e" file.
 
