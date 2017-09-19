@@ -20,11 +20,22 @@ Work in progress...
 * Open a terminal
 * Run command (as superuser on LINUX or MAC, so for example preceeded by "sudo"): pip install pycraft_minetest
 
-## Install Pycraft mod
+### Scratch extension
+If you're planning to use the Pycraft library also in Scratch:
+* Download the following file: [pycraft.s2e](https://raw.githubusercontent.com/sprintingkiwi/pycraft_mod/master/pycraft.s2e)
+* Open Scratch Offline Editor (here's how to install it: )
+* Pressing SHIFT + Left Click on "File" menu, select "Add an extension" and load the downloaded "pycraft.s2e" file.
+
+## Setting up the world
+
+### Using Minetest: install Pycraft mod
 * Follow this tutorial on how to install a mod in Minetest: http://dev.minetest.net/Installing_Mods
 * Create a world (it's better to enable creative mode)
 * click on "configure" and enable "pycraft_mod"
 * Play the game
+
+### Using Minecraft: download the server
+* Download Pycraft for Minecraft server folder: 
 
 ## Create your Python script and run it
 
