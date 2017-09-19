@@ -1,4 +1,4 @@
-# pycraft_lib
+# Pycraft
 Repository for the Pypi "pycraft_minetest" Python Package.
 
 Modified, simplified and improved libraries to code in python via Minetest or Minecraft.
