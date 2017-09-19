@@ -22,7 +22,7 @@ Work in progress...
 If you're planning to use the Pycraft library also in Scratch:
 * <a href="https://raw.githubusercontent.com/sprintingkiwi/pycraft_mod/master/pycraft.s2e" download>Click here to download the pycraft.s2e extension file</a>
 * Open Scratch Offline Editor (here's how to install it: https://scratch.mit.edu/download)
-* Pressing SHIFT + Left Click on "File" menu, select "Add an extension" and load the downloaded "pycraft.s2e" file.
+* Pressing SHIFT + Left Click on "File" menu, select "Import experimental HTTP extension" and load the downloaded "pycraft.s2e" file.
 
 ## Install Minetest and the Pycraft mod
 Follow these instructions: https://github.com/sprintingkiwi/pycraft_mod/blob/master/README.md
