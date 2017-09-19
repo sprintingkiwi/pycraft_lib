@@ -35,7 +35,7 @@ If you're planning to use the Pycraft library also in Scratch:
 * Play the game
 
 ### Using Minecraft: download the server
-* Download Pycraft for Minecraft server folder: 
+Follow the instructions at this repository: https://github.com/gmenegoz/pycraft
 
 ## Create your Python script and run it
 
