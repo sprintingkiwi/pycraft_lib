@@ -3,11 +3,11 @@
 
 Repository for the Pypi "pycraft_minetest" Python Package.
 
-Modified, simplified and improved libraries to code in python via Minetest
+Modified, simplified and improved libraries to code in python via Minetest or Minecraft.
 
-Based on the terrific idea and the original code of David Whale and Martin O'Hanlon (www.stuffaboutcode.com)
+Based on the terrific idea and the original code of David Whale and Martin O'Hanlon (www.stuffaboutcode.com).
 
-Alessandro Norfo (ale.norfo@gmail.com) & Giuseppe Menegoz (gmenegoz@gmail.com)
+Alessandro Norfo (ale.norfo@gmail.com) & Giuseppe Menegoz (gmenegoz@gmail.com).
 
 # Getting Started
 Work in progress...
