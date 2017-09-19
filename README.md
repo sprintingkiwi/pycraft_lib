@@ -24,21 +24,18 @@ If you're planning to use the Pycraft library also in Scratch:
 * Open Scratch Offline Editor (here's how to install it: https://scratch.mit.edu/download)
 * Pressing SHIFT + Left Click on "File" menu, select "Add an extension" and load the downloaded "pycraft.s2e" file.
 
-## Setting up the world
-
-### Using Minetest: install Pycraft mod
-* Follow this tutorial on how to install a mod in Minetest: http://dev.minetest.net/Installing_Mods
-* Create a world (it's better to enable creative mode)
-* click on "configure" and enable "pycraft_mod"
-* Play the game
-
-### Using Minecraft: download the server
-Follow the instructions at this repository: https://github.com/gmenegoz/pycraft
+## Install Minetest and the Pycraft mod
+Follow these instructions: https://github.com/sprintingkiwi/pycraft_mod/blob/master/README.md
 
 ## Create your Python script and run it
+### Setup an editor for Python
+You can use your favourite Python IDE... anyway we suggest Pycharm (https://www.jetbrains.com/pycharm/). If you install Pycharm, we also suggest to import these settings:
+* [WINDOWS or LINUX](https://drive.google.com/open?id=0B9leATA2g5JjT3V4RVNLNWpvNms)
+* [MAC](https://drive.google.com/open?id=0B9leATA2g5JjQTBzSmdETmxCX1k)
 
+So after the first execution, click on FILE -> Import settings and then select the downloaded settings file.
 
-## RECIPES
+### RECIPES
 Now that the Pycraft environment is setted up you are ready to explore and play with Python in Minecraft. 
 
 You will find some "Pycraft Recipes" at: https://github.com/sprintingkiwi/pycraft_lib/tree/master/recipes
