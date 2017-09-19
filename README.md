@@ -1,6 +1,4 @@
 # pycraft_lib
-<img src="https://alessandronorfo.files.wordpress.com/2017/09/pycraft_minetest.png" alt="pycraft_minetest icon" height="360">
-
 Repository for the Pypi "pycraft_minetest" Python Package.
 
 Modified, simplified and improved libraries to code in python via Minetest or Minecraft.
