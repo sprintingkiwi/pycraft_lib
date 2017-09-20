@@ -9,8 +9,6 @@ Based on the terrific idea and the original code of David Whale and Martin O'Han
 Alessandro Norfo (ale.norfo@gmail.com) & Giuseppe Menegoz (gmenegoz@gmail.com).
 
 # Getting Started
-Work in progress...
-
 ## Install Python
 * Go to https://www.python.org
 * Choose Python 2.7
@@ -20,6 +18,7 @@ Work in progress...
 * Run command (as superuser on LINUX or MAC, so for example preceeded by "sudo"): pip install pycraft_minetest
 
 ### Scratch extension
+(Work in progress...)
 If you're planning to use the Pycraft library also in Scratch:
 * <a href="https://raw.githubusercontent.com/sprintingkiwi/pycraft_mod/master/pycraft.s2e" download>Click here to download the pycraft.s2e extension file</a>
 * Open Scratch Offline Editor (here's how to install it: https://scratch.mit.edu/download)
