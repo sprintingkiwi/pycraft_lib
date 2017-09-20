@@ -1,4 +1,4 @@
-# Pycraft for Minetest
+# Pycraft library for Minetest
 <img src="https://alessandronorfo.files.wordpress.com/2017/09/pycraft_minetest.png" alt="pycraft_minetest icon" height="96">
 Repository for the Pypi "pycraft_minetest" Python Package.
 
