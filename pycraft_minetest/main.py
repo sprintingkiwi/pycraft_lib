@@ -1,39 +1,77 @@
 import time, random, math, os
-import connection
-import blocklist as bl
-from util import *
-from event import *
+from . import connection
+from . import blocklist as bl
+from . util import *
+from . event import *
 
 LIBRARY_VERSION = 0.6
 
-# Wait for connection
-wait_for_conn = True
-while wait_for_conn:
-    try:
-        conn = connection.Connection("localhost", 4711)
-    except:
-        print("Waiting for connection...")
-        time.sleep(1)
-    else:
-        wait_for_conn = False
+conn = None
+player = None
 
-# Find the player
-# players = mc.getPlayerEntityIds()
 
-# Wait for at least one player
+def connect_server(host="localhost", port=4711):
+    """ This function connect to a server on a specific port and wait until at
+    least a client is connected.
 
-wait_for_player = True
-while wait_for_player:
-    try:
-        ids = conn.sendReceive("world.getPlayerIds")
-    except:
-        print("Waiting for a player to connect...")
-        time.sleep(1)
-    else:
-        wait_for_player = False
+    Parameters:
 
-players = map(int, ids.split("|"))
-player = players[0]
+        - host      (string)    ip or domain name of the server
+        - port      (int)       port on which the server is waiting for
+                                connection
+
+    Returns:
+
+        A tuple composed of the connection handle and the player id
+
+    Examples:
+
+    >   (conn, player) = connect_server()
+
+        connect to localhost:4711 (default server address:port configuration)
+
+    >   (conn, player) = connect_server("localhost", 4711)
+
+        Same effect of the pervious example but with explicit parameters
+        specification
+
+    >   (conn, player) = connect_server(port=4712)
+
+        We are connecting on localhost on an alternate port readnumber
+
+    """
+    # Wait for connection
+    wait_for_conn = True
+    while wait_for_conn:
+        try:
+            conn = connection.Connection(host, port)
+        except:
+            print("Waiting for connection...")
+            time.sleep(1)
+        else:
+            wait_for_conn = False
+
+    # Find the player
+    # players = mc.getPlayerEntityIds()
+
+    # Wait for at least one player
+
+    wait_for_player = True
+    while wait_for_player:
+        try:
+            ids = conn.sendReceive("world.getPlayerIds")
+        except:
+            print("Waiting for a player to connect...")
+            time.sleep(1)
+        else:
+            wait_for_player = False
+
+    players = list(map(int, ids.split("|")))
+    player = players[0]
+    return (conn, player)
+
+
+conn, player = connect_server()
 
 # BLOCKS
 air = bl.AIR.id
@@ -1085,3 +1123,4 @@ class Turtle:
 
     def round_vec3(self, position):
         return Vec3(int(position.x), int(position.y), int(position.z))
+

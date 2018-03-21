@@ -7,7 +7,7 @@ import os
 import platform
 import base64
 from hashlib import md5
-from util import flatten_parameters_to_string
+from . util import flatten_parameters_to_string
 
 """ @author: Aron Nieminen, Mojang AB"""
 
@@ -37,6 +37,7 @@ class Connection:
         self.socket.connect((address, port))
         self.readFile = self.socket.makefile("r")
         self.lastSent = ""
+        self.encoding = "cp437"  # "utf-8"
         if self.windows:
             atexit.register(self.close)
 
@@ -46,7 +47,7 @@ class Connection:
             try:
                 atexit.unregister(self.close)
             except:
-                pass   
+                pass
 
     def close(self):
         try:
@@ -59,11 +60,11 @@ class Connection:
             self.socket.close()
         except:
             pass
-            
+
     @staticmethod
     def tohex(data):
         return "".join((hex(b) for b in data))
-            
+
     def authenticate(self, username, password):
         challenge = self.sendReceive("world.getBlock",0,0,0)
         if challenge.startswith("security.challenge "):
@@ -84,44 +85,40 @@ class Connection:
             e =  "Drained Data: <%s>\n"%data.strip()
             e += "Last Message: <%s>\n"%self.lastSent.strip()
             sys.stderr.write(e)
-                                             
+
     def send(self, f, *data):
         """Sends data. Note that a trailing newline '\n' is added here"""
         s = "%s(%s)\n"%(f, flatten_parameters_to_string(data))
-        #print "f,data:",f,data
         self.drain()
         self.lastSent = s
         self.socket.sendall(s)
 
     def send_python3(self, f, *data):
         """Sends data. Note that a trailing newline '\n' is added here"""
-        s = "%s(%s)\n"%(f, flatten_parameters_to_string(data))
-        #print "f,data:",f,data
+        s = "%s(%s)\n" % (f, flatten_parameters_to_string(data))
         self.drain()
         self.lastSent = s
-        self.socket.sendall(s.encode("utf-8"))
+        self.socket.sendall(s.encode(self.encoding))
 
     def send_flat(self, f, data):
         """Sends data. Note that a trailing newline '\n' is added here"""
-#        print "f,data:",f,list(data)
-        s = "%s(%s)\n"%(f, ",".join(data))
+        s = "%s(%s)\n" % (f, ",".join(data))
         self.drain()
         self.lastSent = s
         self.socket.sendall(s)
 
     def send_flat_python3(self, f, data):
         """Sends data. Note that a trailing newline '\n' is added here"""
-#        print "f,data:",f,list(data)
-        s = "%s(%s)\n"%(f, ",".join(data))
+        s = "%s(%s)\n" % (f, ",".join(data))
         self.drain()
         self.lastSent = s
-        self.socket.sendall(s.encode("utf-8"))
+        self.socket.sendall(s.encode(self.encoding))
 
     def receive(self):
         """Receives data. Note that the trailing newline '\n' is trimmed"""
         s = self.readFile.readline().rstrip("\n")
         if s == Connection.RequestFailed:
-            raise RequestError("%s failed"%self.lastSent.strip())
+            raise RequestError("%s failed" % self.lastSent.strip())
         return s
 
     def sendReceive(self, *data):

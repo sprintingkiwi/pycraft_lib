@@ -1,4 +1,5 @@
 from pycraft_minetest import *
+import time
 
 # Forever
 while True:
