@@ -28,14 +28,6 @@ def flatten_parameters_to_string(l):
     return ",".join(map(str, flatten(l)))
 
 
-# return maximum of 2 values
-def MAX(a, b):
-    if a > b:
-        return a
-    else:
-        return b
-
-
 # return step
 def ZSGN(a):
     if a < 0:
@@ -93,7 +85,7 @@ def getLine(x1, y1, z1, x2, y2, z2):
                     yd += ay
                     zd += az
             # y dominant
-            elif (ay >= MAX(ax, az)):
+            elif (ay >= max(ax, az)):
                 xd = ax - (ay >> 1)
                 zd = az - (ay >> 1)
                 loop = True
@@ -111,7 +103,7 @@ def getLine(x1, y1, z1, x2, y2, z2):
                     xd += ax
                     zd += az
             # z dominant
-            elif(az >= MAX(ax, ay)):
+            elif(az >= max(ax, ay)):
                 xd = ax - (az >> 1)
                 yd = ay - (az >> 1)
                 loop = True

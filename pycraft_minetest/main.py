@@ -1,7 +1,10 @@
-import time, random, math, os
+import time
+import random
+import math
+import os
 from . import connection
 from . import blocklist as bl
-from . util import *
+from . util import intFloor, flatten, floorFlatten
 from . event import *
 
 LIBRARY_VERSION = 0.6
@@ -398,7 +401,7 @@ def line(block, x1=0, y1=0, z1=0, x2=0, y2=0, z2=0, absolute=False, target=playe
         y = y1
         z = z1
         # X dominant
-        if ax >= MAX(ay, az):
+        if ax >= max(ay, az):
             yd = ay - (ax >> 1)
             zd = az - (ax >> 1)
             loop = True
@@ -416,7 +419,7 @@ def line(block, x1=0, y1=0, z1=0, x2=0, y2=0, z2=0, absolute=False, target=playe
                 yd += ay
                 zd += az
         # Y dominant
-        elif ay >= MAX(ax, az):
+        elif ay >= max(ax, az):
             xd = ax - (ay >> 1)
             zd = az - (ay >> 1)
             loop = True
@@ -434,7 +437,7 @@ def line(block, x1=0, y1=0, z1=0, x2=0, y2=0, z2=0, absolute=False, target=playe
                 xd += ax
                 zd += az
         # Z dominant
-        elif az >= MAX(ax, ay):
+        elif az >= max(ax, ay):
             xd = ax - (az >> 1)
             yd = ay - (az >> 1)
             loop = True
@@ -658,7 +661,7 @@ def polygon(block, shape=6, side=10, x=0, y=0, z=0, direction="horizontal", abso
                 y = y
                 z = z
                 # X dominant
-                if ax >= MAX(ay, az):
+                if ax >= max(ay, az):
                     yd = ay - (ax >> 1)
                     zd = az - (ax >> 1)
                     loop = True
@@ -676,7 +679,7 @@ def polygon(block, shape=6, side=10, x=0, y=0, z=0, direction="horizontal", abso
                         yd += ay
                         zd += az
                 # Y dominant
-                elif ay >= MAX(ax, az):
+                elif ay >= max(ax, az):
                     xd = ax - (ay >> 1)
                     zd = az - (ay >> 1)
                     loop = True
@@ -694,7 +697,7 @@ def polygon(block, shape=6, side=10, x=0, y=0, z=0, direction="horizontal", abso
                         xd += ax
                         zd += az
                 # Z dominant
-                elif az >= MAX(ax, ay):
+                elif az >= max(ax, ay):
                     xd = ax - (az >> 1)
                     yd = ay - (az >> 1)
                     loop = True
