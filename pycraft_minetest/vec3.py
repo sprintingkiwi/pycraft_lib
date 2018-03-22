@@ -1,4 +1,4 @@
-class Vec3:
+class Vec3(object):
     def __init__(self, x=0, y=0, z=0):
         self.x = x
         self.y = y
@@ -45,10 +45,13 @@ class Vec3:
         return self.__iadd__(-rhs)
 
     def __repr__(self):
-        return "Vec3(%s,%s,%s)"%(self.x,self.y,self.z)
+        return "Vec3(%s,%s,%s)"%(self.x, self.y, self.z)
 
     def __iter__(self):
         return iter((self.x, self.y, self.z))
+
+    def __eq__(self, other):
+        return other.x == self.x and other.y == self.y and other.z == self.z
 
     def _map(self, func):
         self.x = func(self.x)
