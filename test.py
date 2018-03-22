@@ -3,7 +3,7 @@ from pycraft_minetest import *
 pos = where()
 chat(pos)
 
-maze("maze1.csv")
+# maze("maze1.csv")
 
 t = turtle(obsidian)
 t.forward(10)

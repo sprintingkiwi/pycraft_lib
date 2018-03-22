@@ -7,7 +7,7 @@ pyr = Turtle(iron)
 steps = 10
 
 # Repeat "half-steps" times
-for i in range(steps/2):
+for i in range(int(steps/2)):
 
     # Repeat 4 times (for 4 sides)
     for i in range(4):
