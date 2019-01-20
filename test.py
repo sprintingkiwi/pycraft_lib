@@ -24,7 +24,7 @@ blocks(wood, x=5, y=6, z=10)
 
 size = readnumber("tell the size...")
 
-cube(redstone, size)
+cube(stone, size)
 
 text = readstring("say something...")
 
