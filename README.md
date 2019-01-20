@@ -18,7 +18,7 @@ Alessandro Norfo (ale.norfo@gmail.com) & Giuseppe Menegoz (gmenegoz@gmail.com).
 * Clic on the "INSTALL" button
 
 ## Install Minetest and the Pycraft mod
-Follow these instructions: https://github.com/sprintingkiwi/pycraft_mod/blob/master/README.md
+Follow these <a href="https://github.com/sprintingkiwi/pycraft_mod/blob/master/README.md" target="_blank">instructions</a>
 
 ## Create your Python script and run it
 Now that the Pycraft environment is setted up you are ready to explore and play with Python in Minecraft. 
