@@ -11,5 +11,10 @@ while True:
     # Sequentially create many spheres with different materials
     # but in the same absolute position
     sphere(grass, 10, x=pos.x+25, y=pos.y, z=pos.z, absolute=True)
+    time.sleep(1)
+
     sphere(gold, 10, x=pos.x+25, y=pos.y, z=pos.z, absolute=True)
+    time.sleep(1)
+
     sphere(ice, 10, x=pos.x+25, y=pos.y, z=pos.z, absolute=True)
+    time.sleep(1)

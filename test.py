@@ -3,7 +3,7 @@ from pycraft_minetest import *
 pos = where()
 chat(pos)
 
-maze("maze1.csv")
+# maze("maze1.csv")
 
 t = turtle(obsidian)
 t.forward(10)
@@ -24,7 +24,7 @@ blocks(wood, x=5, y=6, z=10)
 
 size = readnumber("tell the size...")
 
-cube(redstone, size)
+cube(stone, size)
 
 text = readstring("say something...")
 
@@ -97,4 +97,5 @@ while True:
 #     time.sleep(0.1)
 #     cube(air, 5, x, y, z, absolute=True)
 #     x += 1
+
 

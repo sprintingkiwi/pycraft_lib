@@ -1,14 +1,14 @@
 import collections
 import math
 import copy
-from vec3 import Vec3
+from . vec3 import Vec3
 
 def intFloor(*args):
     return [int(math.floor(x)) for x in flatten(args)]
 
 def flatten(l):
     for e in l:
-        if isinstance(e, collections.Iterable) and not isinstance(e, basestring):
+        if isinstance(e, collections.Iterable) and not isinstance(e, str):
             for ee in flatten(e): yield ee
         else: yield e
 

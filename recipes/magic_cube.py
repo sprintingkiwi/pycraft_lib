@@ -1,5 +1,7 @@
 from pycraft_minetest import *
+import time
 
+(conn, player) = connect_server()
 
 while True:
 
