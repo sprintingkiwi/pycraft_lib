@@ -25,4 +25,4 @@ Now that the Pycraft environment is setted up you are ready to explore and play 
 
 You will find some "Pycraft Recipes" at: https://github.com/sprintingkiwi/pycraft_lib/tree/master/recipes
 
-Refer to the wiki as library documentation: https://github.com/sprintingkiwi/pycraft_lib/wiki
+While we work on the wiki (https://github.com/sprintingkiwi/pycraft_lib/wiki), you can refer to this document as a library documentation: https://docs.google.com/document/d/1llSHBCEhkrPhav0oZjyfd_CUMyBJSw-M3nCBkghgGcQ/edit#heading=h.ahvbqshet4wq
