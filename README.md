@@ -23,6 +23,4 @@ Follow these <a href="https://github.com/sprintingkiwi/pycraft_mod/blob/master/R
 ## Create your Python script and run it
 Now that the Pycraft environment is setted up you are ready to explore and play with Python in Minecraft. 
 
-You will find some "Pycraft Recipes" at: https://github.com/sprintingkiwi/pycraft_lib/tree/master/recipes
-
-While we work on the wiki (https://github.com/sprintingkiwi/pycraft_lib/wiki), you can refer to this document as a library documentation: https://docs.google.com/document/d/1llSHBCEhkrPhav0oZjyfd_CUMyBJSw-M3nCBkghgGcQ/edit#heading=h.ahvbqshet4wq
+You can learn how to use this library looking at the following examples: https://github.com/sprintingkiwi/pycraft_lib/tree/master/recipes
